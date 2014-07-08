@@ -16,16 +16,16 @@ a
 body
 {
 	background-image: url("img/fondo.png");
-	background: #EEF3FA;
+	
 	color: #9E9FA0;
 	font-family: principal_font;	
-	font-size: 15px;
+	font-size: 14px;/*Tamaño*/
 }
 
 footer
 {
 	background: #444444;
-	margin: 6px;
+	margin: 6px; /*Tamaño*/
 	padding: 1em;	
 	float: left;
 	width: 100%;
@@ -33,13 +33,15 @@ footer
 
 header
 {	
+	background: white;
 	float: left;	
+	height: 96px; /*Tamaño*/
+	margin: 6px; /*Tamaño*/
 	position: relative;
-	margin: 6px;
-	width: 456px;
-	height: 144px;
 	text-align: center;
 	vertical-align: middle;	
+	width: 312px; /*Tamaño*/
+	overflow: hidden;
 }
 
 header #logo, #banner
@@ -47,9 +49,15 @@ header #logo, #banner
 	margin: 0px;
 }
 
-header #logo img
+header #logo
 {
-	width: 100%;
+	position: absolute;
+	top: 25%;
+}
+
+header #logo img
+{	
+	width: 90%;
 }
 
 nav
@@ -73,10 +81,10 @@ nav ul li
 	border:0;
 	display: inline-block;
 	float: left;	
-	height: 144px;
-	margin: 6px;
+	height: 96px; /*TamañoA*/
+	margin: 6px; /*Tamaño*/
 	padding: 0px;	
-	width: 144px;	
+	width: 96px; /*Tamaño*/
 }
 
 nav ul li a:hover
@@ -96,7 +104,7 @@ nav ul li a
 	font-size: 0.9em;
 	display: block;	
 	text-decoration: none;
-	padding: 8em 0 1em 1em;
+	padding: 5.4em 0 0.5em 1em;
 	-webkit-transition:0.4s;
 	-moz-transition:0.4s;
 	-ms-transition:0.4s;	
@@ -106,7 +114,7 @@ nav ul li a
 #clientes
 {	
 	background: white;
-	margin: 6px;
+	margin: 6px;  /*Tamaño*/
 	padding: 1em;
 	float: left;
 	width: 100%;
@@ -125,7 +133,7 @@ nav ul li a
 }
 #clientes ul li figure img
 {
-	width: 250px;
+	width: 100px; /*Tamaño*/
 }
 
 #contenedor
@@ -136,7 +144,7 @@ nav ul li a
 	overflow: hidden;
 	padding: 1em 0 0 0;
 	position: relative;
-	width: 1404px;
+	width: 972px; /*Tamaño*/
 }
 
 #contenido
@@ -149,35 +157,36 @@ nav ul li a
 {	
 	background: white;
 	float: left;
-	height: 456px;
+	height: 312px; /*Tamaño*/
 	margin:6px;
 	overflow: hidden;
 	position: relative;
-	width: 456px;
+	width: 312px; /*Tamaño*/
 }
 
 #contenido .contenido_item .imagen
 {
-	height: 312px;
+	height: 192px; /*Tamaño*/
 	margin: 0px;
 	overflow: hidden;
 	position: relative;
-	width: 456px;	
+	width: 312px;	/*Tamaño*/
 }
 
 #contenido .contenido_item .imagen img
 {	
 	width: 100%;
-	max-width: 456px;
-	min-height: 312px;
+	max-width: 312px;/*Tamaño*/
+	min-height: 156px;/*Tamaño*/
 }
 
 #contenido .contenido_item .texto
 {
 	-webkit-transition:0.3s;
-	height: 144px;
+	height: 120px; /*Tamaño*/
 	overflow: hidden;
 	padding: 0.5em 0.5em 0 0.5em;
+	text-align: center;
 }
 
 #contenido .contenido_item .efecto
@@ -200,19 +209,27 @@ nav ul li a
 	background: #898989;
 	color: white;
 	text-decoration: none;
-	text-shadow: rgb(0,0,0) 0 1px 1px;
+	/*text-shadow: rgb(0,0,0) 0 1px 1px;*/
 }
 
-#contenido .contenido_item:hover .texto .subtitulo
-{
-	color: white;	
-}
 
 #contenido .contenido_item .texto .subtitulo
 {
 	font-size: 1.2em;
 	font-weight: bold;
-	color: #80C408;	
+	color: #80C408;
+	margin-bottom: 0;
+	margin-top: 0.5em;
+}
+
+#contenido .contenido_item:hover .texto .subtitulo
+{
+	color: white;
+}
+
+#contenido .contenido_item .texto .parrafo
+{
+	margin-top: 0;
 }
 
 #noticias
@@ -220,16 +237,16 @@ nav ul li a
 	background: white;
 	float: left;	
 	margin:6px;
-	width: 456px;
+	width: 312px; /*Tamaño*/
 }
 
 #noticias .banner
 {	
 	background: white;
-	min-height: 456px;
+	height: 312px; /*Tamaño*/
 	overflow: hidden;
 	position: relative;
-	width: 456px;	
+	width: 312px; /*Tamaño*/
 }
 
 #noticias .banner .texto
@@ -240,7 +257,7 @@ nav ul li a
 #noticias #publicacion
 {
 	margin: 6px;
-	height: 456px;
+	height: 312px; /*Tamaño*/
 	overflow: hidden;	
 }
 
@@ -265,86 +282,117 @@ nav ul li a
 	padding-left: 0.5em;
 	text-align: left;
 }
-/*
-@media only screen and (max-width: 1419px) and (min-width: 1260px){
-	body
-	{
-		font-size: 13.5px;
-	}
 
-	#contenedor
-	{
-		width: 1260px;
-		margin: 0 auto;
-		display: block;	
-		padding: 1em 0 0 0;		
-		overflow: hidden;
-		position: relative;
-	}
-	#contenido .contenido_item
-	{	
-		background: white;
-		float: left;
-		margin:6px;
-		position: relative;
-		width: 408px;
-		height: 408px;
-		overflow: hidden;
-	}
-	nav ul li
-	{
-		background: #80C408;			
-		border:0;
-		display: inline-block;
-		float: left;
-		height: 128px;
-		margin: 6px;
-		padding: 0px;	
-		width: 128px;	
-	}
 
-	#noticias
-	{
-		background: white;	
-		float: left;
-		margin:6px;		
-		width: 408px;
-	}
+@media only screen and (max-width: 979px) and (min-width: 768px){
 
-	#noticias
-	{
-		background: white;	
-		float: left;
-		margin:6px;		
-		width: 408px;
-	}
+body
+{	
+	font-size: 12px;
+}
 
-	#noticias .banner
-	{	
-		background: white;
-		position: relative;
-		width: 408px;
-		min-height: 408px;
-		overflow: hidden;
-	}
+footer
+{
+	margin: 3px; /*Tamaño*/
+}
 
-	header
-	{	
-		float: left;	
-		position: relative;
-		margin: 6px;
-		width: 408px;
-		height: 144px;
-		text-align: center;		
-	}
+header
+{	
+	height: 78px; /*Tamaño*/
+	margin: 3px; /*Tamaño*/	
+	width: 246px; /*Tamaño*/	
+}
 
-	header #logo, #banner
-	{
-		margin: 0px;
-	}
+header #logo img
+{	
+	width: 90%;
+}
 
-	header #logo img
-	{
-		width: 70%;
-	}
-}*/
+nav ul li
+{	
+	height: 78px; /*Tamaño*/
+	margin: 3px; /*Tamaño*/	
+	width: 78px; /*Tamaño*/
+}
+
+nav ul li a
+{	
+	font-size: 0.9em;	
+	padding: 5.1em 0 0.5em 0.5em;
+}
+
+#clientes
+{	
+	margin: 3px;  /*Tamaño*/
+	padding: 1em;
+}
+
+
+#clientes ul li figure img
+{
+	width: 80px; /*Tamaño*/
+}
+
+#contenedor
+{	
+	width: 756px; /*Tamaño*/
+}
+
+
+#contenido .contenido_item
+{	
+	height: 246px; /*Tamaño*/
+	margin:3px;
+	width: 246px; /*Tamaño*/
+}
+
+#contenido .contenido_item .imagen
+{
+	height: 126px; /*Tamaño*/
+	width: 246px;	/*Tamaño*/
+}
+
+#contenido .contenido_item .imagen img
+{
+	max-width: 246px;/*Tamaño*/
+	min-height: 126px;/*Tamaño*/
+}
+
+#contenido .contenido_item .texto
+{
+	height: 120px; /*Tamaño*/	
+}
+
+#contenido .contenido_item .efecto
+{
+	border:6px solid rgba(0,0,0,0);	
+}
+
+#contenido .contenido_item:hover .efecto
+{
+	border:6px solid rgba(255,255,255,0.3);	
+}
+
+#noticias
+{
+	margin:3px;
+	width: 246px; /*Tamaño*/
+}
+
+#noticias .banner
+{	
+	height: 246px; /*Tamaño*/
+	width: 246px; /*Tamaño*/
+}
+
+#noticias .banner .texto
+{	
+	padding: 0.5em 0.5em 0 0.5em;
+}
+
+#noticias #publicacion
+{
+	margin: 3px;
+	height: 246px; /*Tamaño*/	
+}	
+}
