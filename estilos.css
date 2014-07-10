@@ -9,6 +9,12 @@
     font-style: normal;
 }
 
+@font-face {
+	font-family: 'SEGOEUIL';
+	src: url('./fonts/SEGOEUIL.eot');
+	src: local('SEGOEUIL'), url('./fonts/SEGOEUIL.woff') format('woff'), url('./fonts/SEGOEUIL.ttf') format('truetype');
+}
+
 a
 {
 	color: #80C408;
@@ -17,18 +23,19 @@ body
 {
 	background-image: url("img/fondo.png");
 	
-	color: #9E9FA0;
-	font-family: principal_font;	
-	font-size: 14px;/*Tamaño*/
+	color: #8D8D8D;
+	font-family: SEGOEUIL;	
+	font-size: 16px;/*Tamaño*/
 }
 
 footer
 {
-	background: #444444;
+	background: #2A2D33;
 	margin: 6px; /*Tamaño*/
 	padding: 1em;	
 	float: left;
-	width: 100%;
+	width: 928px;
+	display: inline-block;
 }
 
 header
@@ -57,7 +64,7 @@ header #logo
 
 header #logo img
 {	
-	width: 90%;
+	width: 95%;
 }
 
 nav
@@ -99,32 +106,103 @@ nav ul li #current
 
 nav ul li a
 {
-	color: white;
-	font-weight: bold;
-	font-size: 0.9em;
-	display: block;	
-	text-decoration: none;
-	padding: 5.4em 0 0.5em 1em;
-	-webkit-transition:0.4s;
 	-moz-transition:0.4s;
 	-ms-transition:0.4s;	
+	-webkit-transition:0.4s;
 	/*text-shadow:rgb(0, 0, 0) 0px 1px 1px;*/
+	color: white;	
+	display: block;	
+	font-size: 1em;
+	padding: 4em 0 0.5em 1em;
+	text-decoration: none;
+}
+
+#contacto
+{
+	float: left;
+	width: 328px;	
+}
+
+#contacto ul
+{
+	list-style: none;
+	padding-left:1em;
+	font-size: 0.9em;
+	color: white;
+}
+#contacto ul li .prefijo
+{
+	font-size: 1em;
+	color: #80C408;
+	display: inline-block;
+	width: 2.5em;
+}
+
+#contacto span
+{
+	font-size: 1.3em;	
+}
+
+#social
+{
+	float: right;
+	width: 300px;	
+}
+
+#social ul
+{
+	list-style: none;
+	padding-left:1em;
+	font-size: 0.9em;
+	color: white;
+}
+
+#social span
+{
+	font-size: 1.3em;
+}
+
+#navegacion
+{
+	float: left;
+	width: 300px;
+}
+
+#navegacion ul
+{
+	list-style: none;
+	padding-left:1em;
+	font-size: 0.9em;
+	color: white;	
+}
+
+#navegacion span
+{
+	font-size: 1.3em;	
+}
+
+#navegacion ul li a
+{
+	text-decoration: none;
+	color: white;
 }
 
 #clientes
 {	
 	background: white;
-	margin: 6px;  /*Tamaño*/
-	padding: 1em;
 	float: left;
-	width: 100%;
+	margin: 6px;  /*Tamaño*/
+	padding: 16px;
 	text-align: center;
 	vertical-align: middle;
+	width: 928px;
 }
 
 #clientes ul
 {
-	list-style: none;	
+	list-style: none;
+	padding: 0;
+	margin:0;
 }
 
 #clientes ul li
@@ -133,7 +211,7 @@ nav ul li a
 }
 #clientes ul li figure img
 {
-	width: 100px; /*Tamaño*/
+	width: 140px; /*Tamaño*/
 }
 
 #contenedor
@@ -191,12 +269,12 @@ nav ul li a
 
 #contenido .contenido_item .efecto
 {
-	position: absolute;
-	top:0;
-	right: 0;
+	border:6px solid rgba(0,0,0,0);	
 	bottom: 0;
 	left: 0;
-	border:6px solid rgba(0,0,0,0);	
+	position: absolute;
+	right: 0;
+	top:0;
 }
 
 #contenido .contenido_item:hover .efecto
@@ -206,20 +284,19 @@ nav ul li a
 
 #contenido .contenido_item:hover .texto
 {	
-	background: #898989;
-	color: white;
-	text-decoration: none;
+	background: #80C408; /*#898989;*/
+	color: white;	
 	/*text-shadow: rgb(0,0,0) 0 1px 1px;*/
 }
 
 
 #contenido .contenido_item .texto .subtitulo
 {
-	font-size: 1.2em;
-	font-weight: bold;
 	color: #80C408;
+	font-size: 1.3em;	
+	font-weight: normal;
 	margin-bottom: 0;
-	margin-top: 0.5em;
+	margin-top: 0;
 }
 
 #contenido .contenido_item:hover .texto .subtitulo
@@ -229,7 +306,7 @@ nav ul li a
 
 #contenido .contenido_item .texto .parrafo
 {
-	margin-top: 0;
+	margin: 0;
 }
 
 #noticias
@@ -274,6 +351,15 @@ nav ul li a
 	position: relative;
 }
 
+#powered
+{
+	display: block;
+	float: left;
+	width: 928px;
+	font-size: 0.7em;
+	text-align: center;
+}
+
 #acerca_de
 {	
 	display: block;
@@ -283,116 +369,118 @@ nav ul li a
 	text-align: left;
 }
 
+/* --- MEDIA QUERIES --*/
 
 @media only screen and (max-width: 979px) and (min-width: 768px){
 
-body
-{	
-	font-size: 12px;
-}
+	body
+	{	
+		font-size: 13px;
+	}
 
-footer
-{
-	margin: 3px; /*Tamaño*/
-}
+	footer
+	{
+		margin: 3px; /*Tamaño*/
+	}
 
-header
-{	
-	height: 78px; /*Tamaño*/
-	margin: 3px; /*Tamaño*/	
-	width: 246px; /*Tamaño*/	
-}
+	header
+	{	
+		height: 78px; /*Tamaño*/
+		margin: 3px; /*Tamaño*/	
+		width: 246px; /*Tamaño*/	
+	}
 
-header #logo img
-{	
-	width: 90%;
-}
+	header #logo img
+	{	
+		width: 90%;
+	}
 
-nav ul li
-{	
-	height: 78px; /*Tamaño*/
-	margin: 3px; /*Tamaño*/	
-	width: 78px; /*Tamaño*/
-}
+	nav ul li
+	{	
+		height: 78px; /*Tamaño*/
+		margin: 3px; /*Tamaño*/	
+		width: 78px; /*Tamaño*/
+	}
 
-nav ul li a
-{	
-	font-size: 0.9em;	
-	padding: 5.1em 0 0.5em 0.5em;
-}
+	nav ul li a
+	{	
+		font-size: 1em;	
+		padding: 3.9em 0 0.5em 0.5em;
+	}
 
-#clientes
-{	
-	margin: 3px;  /*Tamaño*/
-	padding: 1em;
-}
-
-
-#clientes ul li figure img
-{
-	width: 80px; /*Tamaño*/
-}
-
-#contenedor
-{	
-	width: 756px; /*Tamaño*/
-}
+	#clientes
+	{	
+		margin: 3px;  /*Tamaño*/
+		padding: 1em;
+		width: 724px;
+	}
 
 
-#contenido .contenido_item
-{	
-	height: 246px; /*Tamaño*/
-	margin:3px;
-	width: 246px; /*Tamaño*/
-}
+	#clientes ul li figure img
+	{
+		width: 90px; /*Tamaño*/
+	}
 
-#contenido .contenido_item .imagen
-{
-	height: 126px; /*Tamaño*/
-	width: 246px;	/*Tamaño*/
-}
+	#contenedor
+	{	
+		width: 756px; /*Tamaño*/
+	}
 
-#contenido .contenido_item .imagen img
-{
-	max-width: 246px;/*Tamaño*/
-	min-height: 126px;/*Tamaño*/
-}
 
-#contenido .contenido_item .texto
-{
-	height: 120px; /*Tamaño*/	
-}
+	#contenido .contenido_item
+	{	
+		height: 246px; /*Tamaño*/
+		margin:3px;
+		width: 246px; /*Tamaño*/
+	}
 
-#contenido .contenido_item .efecto
-{
-	border:6px solid rgba(0,0,0,0);	
-}
+	#contenido .contenido_item .imagen
+	{
+		height: 146px; /*Tamaño*/
+		width: 246px;	/*Tamaño*/
+	}
 
-#contenido .contenido_item:hover .efecto
-{
-	border:6px solid rgba(255,255,255,0.3);	
-}
+	#contenido .contenido_item .imagen img
+	{
+		max-width: 246px;/*Tamaño*/
+		min-height: 126px;/*Tamaño*/
+	}
 
-#noticias
-{
-	margin:3px;
-	width: 246px; /*Tamaño*/
-}
+	#contenido .contenido_item .texto
+	{
+		height: 100px; /*Tamaño*/	
+	}
 
-#noticias .banner
-{	
-	height: 246px; /*Tamaño*/
-	width: 246px; /*Tamaño*/
-}
+	#contenido .contenido_item .efecto
+	{
+		border:6px solid rgba(0,0,0,0);	
+	}
 
-#noticias .banner .texto
-{	
-	padding: 0.5em 0.5em 0 0.5em;
-}
+	#contenido .contenido_item:hover .efecto
+	{
+		border:6px solid rgba(255,255,255,0.3);	
+	}
 
-#noticias #publicacion
-{
-	margin: 3px;
-	height: 246px; /*Tamaño*/	
-}	
+	#noticias
+	{
+		margin:3px;
+		width: 246px; /*Tamaño*/
+	}
+
+	#noticias .banner
+	{	
+		height: 246px; /*Tamaño*/
+		width: 246px; /*Tamaño*/
+	}
+
+	#noticias .banner .texto
+	{	
+		padding: 0.5em 0.5em 0 0.5em;
+	}
+
+	#noticias #publicacion
+	{
+		margin: 3px;
+		height: 246px; /*Tamaño*/	
+	}	
 }
