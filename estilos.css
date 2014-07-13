@@ -15,17 +15,132 @@
 	src: local('SEGOEUIL'), url('./fonts/SEGOEUIL.woff') format('woff'), url('./fonts/SEGOEUIL.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: 'icomoon';
+	src:url('./fonts/icomoon.eot?7vgpia');
+	src:url('./fonts/icomoon.eot?#iefix7vgpia') format('embedded-opentype'),
+		url('./fonts/icomoon.woff?7vgpia') format('woff'),
+		url('./fonts/icomoon.ttf?7vgpia') format('truetype'),
+		url('./fonts/icomoon.svg?7vgpia#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	padding-right: 0.5em;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-eliminar:before {
+	content: "\e600";
+}
+.icon-check:before {
+	content: "\e601";
+}
+.icon-mas:before {
+	content: "\e602";
+}
+.icon-menos:before {
+	content: "\e603";
+}
+.icon-igual:before {
+	content: "\e604";
+}
+.icon-derecha:before {
+	content: "\e605";
+}
+.icon-chevron-left:before {
+	content: "\e606";
+}
+.icon-flecha_derecha:before {
+	content: "\e607";
+}
+.icon-flecha_izquierda:before {
+	content: "\e608";
+}
+.icon-grilla:before {
+	content: "\e609";
+}
+.icon-submenu:before {
+	content: "\e60a";
+}
+.icon-home:before {
+	content: "\e60b";
+}
+.icon-ubicacion:before {
+	content: "\e60c";
+}
+.icon-imagen:before {
+	content: "\e60d";
+}
+.icon-flecha_arriba:before {
+	content: "\e60e";
+}
+.icon-flecha_abajo:before {
+	content: "\e60f";
+}
+.icon-estrella:before {
+	content: "\e610";
+}
+.icon-prohibido:before {
+	content: "\e611";
+}
+.icon-advertencia:before {
+	content: "\e612";
+}
+.icon-usuario:before {
+	content: "\e613";
+}
+.icon-abierto:before {
+	content: "\e614";
+}
+.icon-cerrado:before {
+	content: "\e615";
+}
+.icon-eliminar_usuario:before {
+	content: "\e616";
+}
+.icon-agregar_usuario:before {
+	content: "\e617";
+}
+.icon-grupo:before {
+	content: "\e618";
+}
+.icon-pie:before {
+	content: "\e619";
+}
+.icon-barras:before {
+	content: "\e61a";
+}
+.icon-calendario:before {
+	content: "\e61b";
+}
+
 a
 {
 	color: #80C408;
 }
 body
-{
+{	
 	background-image: url("img/fondo.png");
-	
 	color: #8D8D8D;
 	font-family: SEGOEUIL;	
 	font-size: 16px;/*Tamaño*/
+}
+
+figure
+{
+	margin:0;
+	padding: 0;
 }
 
 footer
@@ -49,6 +164,7 @@ header
 	vertical-align: middle;	
 	width: 312px; /*Tamaño*/
 	overflow: hidden;
+	box-shadow: #6F6F6F 1px 1px 10px;
 }
 
 header #logo, #banner
@@ -75,10 +191,10 @@ nav
 
 nav ul
 {	
+	display: block;	
 	list-style: none;
 	margin: 0;	
 	padding: 0;		
-	display: block;	
 	position: relative;	
 }
 
@@ -117,6 +233,16 @@ nav ul li a
 	text-decoration: none;
 }
 
+
+#acerca_de
+{	
+	display: block;
+	font-size: 0.7em;
+	font-weight: bold;	
+	padding-left: 0.5em;
+	text-align: left;
+}
+
 #contacto
 {
 	float: left;
@@ -125,66 +251,22 @@ nav ul li a
 
 #contacto ul
 {
+	color: white;
+	font-size: 0.9em;
 	list-style: none;
 	padding-left:1em;
-	font-size: 0.9em;
-	color: white;
 }
 #contacto ul li .prefijo
 {
-	font-size: 1em;
 	color: #80C408;
 	display: inline-block;
+	font-size: 1em;
 	width: 2.5em;
 }
 
 #contacto span
 {
 	font-size: 1.3em;	
-}
-
-#social
-{
-	float: right;
-	width: 300px;	
-}
-
-#social ul
-{
-	list-style: none;
-	padding-left:1em;
-	font-size: 0.9em;
-	color: white;
-}
-
-#social span
-{
-	font-size: 1.3em;
-}
-
-#navegacion
-{
-	float: left;
-	width: 300px;
-}
-
-#navegacion ul
-{
-	list-style: none;
-	padding-left:1em;
-	font-size: 0.9em;
-	color: white;	
-}
-
-#navegacion span
-{
-	font-size: 1.3em;	
-}
-
-#navegacion ul li a
-{
-	text-decoration: none;
-	color: white;
 }
 
 #clientes
@@ -251,8 +333,9 @@ nav ul li a
 	width: 312px;	/*Tamaño*/
 }
 
-#contenido .contenido_item .imagen img
-{	
+#contenido .contenido_item .imagen img 
+{
+	-webkit-transition:0.3s;
 	width: 100%;
 	max-width: 312px;/*Tamaño*/
 	min-height: 156px;/*Tamaño*/
@@ -277,18 +360,23 @@ nav ul li a
 	top:0;
 }
 
+
 #contenido .contenido_item:hover .efecto
 {
 	border:6px solid rgba(255,255,255,0.3);	
+}
+
+#contenido .contenido_item:hover
+{
+	box-shadow: #6F6F6F 1px 1px 10px;
 }
 
 #contenido .contenido_item:hover .texto
 {	
 	background: #80C408; /*#898989;*/
 	color: white;	
-	/*text-shadow: rgb(0,0,0) 0 1px 1px;*/
+	
 }
-
 
 #contenido .contenido_item .texto .subtitulo
 {
@@ -309,12 +397,87 @@ nav ul li a
 	margin: 0;
 }
 
+#contenido_interno
+{
+	width: 604px;
+	background: white;
+	float: left;
+	margin: 6px;
+	padding: 8px 16px;
+}
+
+#contenido_interno .cabecera_item .imagen_cabecera
+{
+	background: #80C408;
+	color: white;
+	float: left;
+	font-size: 1.5em;
+	height: 50px;
+	margin-right: 0.3em;
+	position: relative;	
+	width: 50px;
+}
+
+#contenido_interno .cabecera_item .imagen_cabecera span
+{
+	position: absolute;
+	top: 12.5px;
+	left: 12.5px;
+}
+
+#contenido_interno .item_interno .contenido_item p
+{
+	text-align: justify;	
+	line-height: 1.2em;
+}
+
+#contenido_interno .item_interno img
+{
+	width: 300px;
+	float: left;
+	vertical-align: top;
+	margin: 0 0.5em 0 0;
+}
+
+.h2
+{
+	font-size: 1.7rem;
+	color: #8D8D8D;
+	margin: 0.5rem 0;
+	border-bottom: 1px solid #8D8D8D;
+}
+
+#navegacion
+{
+	float: left;
+	width: 300px;
+}
+
+#navegacion ul
+{
+	list-style: none;
+	padding-left:1em;
+	font-size: 0.9em;
+	color: white;	
+}
+
+#navegacion span
+{
+	font-size: 1.3em;	
+}
+
+#navegacion ul li a
+{
+	text-decoration: none;
+	color: white;
+}
+
 #noticias
 {
 	background: white;
 	float: left;	
 	margin:6px;
-	width: 312px; /*Tamaño*/
+	width: 312px; /*Tamaño*/	
 }
 
 #noticias .banner
@@ -343,6 +506,33 @@ nav ul li a
 	text-align: center;
 }
 
+#noticias .menu_izquierdo
+{
+	padding: 0.5em 1em;
+}
+
+#noticias .menu_izquierdo .navega
+{
+	list-style: none;
+	margin: 0;
+	padding: 0.5em 0;
+	color: #80C408;
+	font-size: 1.2em;
+}
+
+#noticias .menu_izquierdo .navega  li
+{
+	margin-bottom: 0.5em;
+	padding-bottom: 0.5em;
+	border-bottom: 1px solid #80C408;
+
+}
+
+#noticias .menu_izquierdo .navega li a
+{
+	text-decoration: none;
+}
+
 #principal
 {	
 	border: 1px solid blue;	
@@ -360,13 +550,23 @@ nav ul li a
 	text-align: center;
 }
 
-#acerca_de
-{	
-	display: block;
-	font-size: 0.7em;
-	font-weight: bold;	
-	padding-left: 0.5em;
-	text-align: left;
+#social
+{
+	float: right;
+	width: 300px;	
+}
+
+#social ul
+{
+	list-style: none;
+	padding-left:1em;
+	font-size: 0.9em;
+	color: white;
+}
+
+#social span
+{
+	font-size: 1.3em;
 }
 
 /* --- MEDIA QUERIES --*/
